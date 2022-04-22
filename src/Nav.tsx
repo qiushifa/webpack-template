@@ -1,5 +1,5 @@
-import React from "react";
-import "./lib.scss";
+import React from 'react';
+import './lib.scss';
 
 interface IProps {
   name?: string;

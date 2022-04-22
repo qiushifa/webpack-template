@@ -9,7 +9,8 @@
     "start": "webpack serve --env NODE_ENV=local --env debug --mode=development --progress --stats minimal",
     "local": "webpack --env NODE_ENV=local --env debug --mode=development",
     "prod": "webpack --env NODE_ENV=prod --mode=production",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepare": "husky install",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --max-warnings 5"
   },
   "author": "qiushifa",
   "license": "ISC",
@@ -58,6 +59,7 @@
     "eslint-plugin-react-hooks": "^4.4.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
+    "husky": "^7.0.4",
     "mini-css-extract-plugin": "^2.6.0",
     "postcss": "^8.4.12",
     "postcss-import": "^14.1.0",
