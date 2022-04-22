@@ -1,0 +1,14 @@
+# dependencies
+/node_modules
+
+
+# production
+/dist
+
+
+yarn-debug.log*
+yarn-error.log*
+
+# use yarn
+package-lock.json
+.DS_Store
