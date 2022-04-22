@@ -114,7 +114,7 @@ module.exports = {
         "plugin:react/recommended",
         "plugin:import/typescript",
       ],
-      plugins: ["react", "@typescript-eslint", "react-hooks"],
+      plugins: ["react",'babel', "@typescript-eslint", "react-hooks"],
       rules: {
         ...jsRules,
         ...tsRules,
