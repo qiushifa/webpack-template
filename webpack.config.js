@@ -24,11 +24,13 @@ module.exports = {
               compact: false, // 这个建议配，能提升性能。这里只处理非压缩文件，所以设置为false。
             },
           },
-          'ts-loader',
+          {
+            loader: 'ts-loader',
+            options: {
+              configFile: path.resolve('./tsconfig.json'),
+            },
+          },
         ],
-        options: {
-          configFile: path.resolve('./tsconfig.json'),
-        },
         exclude: /node_modules/,
       },
       {

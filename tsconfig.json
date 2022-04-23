@@ -1,26 +1,41 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "es6",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
+    "target": "es2019", // 用于指定编译后js文件里的语法应该遵循哪个JavaScript的版本的版本目标:
+    "lib": ["es6", "es2020", "esnext", "dom"], // 用于指定要包含在编译中的库文件
+    "module": "es6", // 用来指定编译后的js要使用的模块标准: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'.
+    "jsx": "react-jsx", // 指定jsx代码用于的开发环境: 'preserve', 'react-native', or 'react'.
+
+    "skipLibCheck": true, // 忽略所有的声明文件（*.d.ts）的类型检查。
+    "resolveJsonModule": true, // 允许加载json文件
+    "esModuleInterop": true, // 通过为导入内容创建命名空间，实现CommonJS和ES模块之间的互操作性
+    "removeComments": true, // 删除编译后的所有的注释
+    "allowSyntheticDefaultImports": true, // 允许从没有设置默认导出的模块中默认导入
+
+    /* 类型检查 */
+    // 编译后的文件是否开启严格模式，默认false
+    "alwaysStrict": true,
+    // 不允许隐式的any，默认false(允许)
+    "noImplicitAny": true,
+    // 不允许隐式的this，默认false(允许)
+    "noImplicitThis": true,
+    // 是否严格的检查空值，默认false 检查有可能为null的地方
+    "strictNullChecks": true,
+    // 是否严格检查bind、call和apply的参数列表，默认false  检查是否有多余参数
+    // "strictBindCallApply": true,
+    // 是否严格检查函数的类型，
+    // "strictFunctionTypes": false,
+    // 是否严格检查属性是否初始化，默认false
+    // "strictPropertyInitialization": false,
+
+    "noUnusedLocals": true, // 有未使用的变量时，抛出错误
+    "noUnusedParameters": true, // 有未使用的参数时，抛出错误
+    "noImplicitReturns": true, // 并不是所有函数里的代码都有返回值时，抛出错误
+    "noFallthroughCasesInSwitch": false, // 允许 switch 的 case 语句贯穿
+
+    "moduleResolution": "node" // 选择模块解析策略： 'node' (Node.js) or 'classic'
+
+    /* 不生成编译文件，这个一般比较少用 */
     // "noEmit": true,
-    "jsx": "react-jsx"
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"]
 }
